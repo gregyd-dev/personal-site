@@ -1,31 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
-  selector: 'homepage',
+  selector: 'app-homepage',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './homepage.html',
-  styleUrl: './homepage.css'
+  imports: [],
+  templateUrl: './homepage.component.html',
+  styleUrls: ['./homepage.component.css']  // Corrected styleUrl to styleUrls
 })
-
-export class Homepage implements OnInit {
+export class HomepageComponent implements OnInit {
   originalName = 'Gregyd';
   newName = 'Gregory Deng';
-  typingSpeed = 100; 
-  deletingSpeed = 100; 
+  typingSpeed = 100;
+  deletingSpeed = 100;
   delayBeforeTyping = 400;
   delayAfterTyping = 600;
   delayAfterDelete = 250;
 
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
+
   ngOnInit() {
     setTimeout(() => {
       this.typeAndReplace();
-    }, this.delayBeforeTyping)
+    }, this.delayBeforeTyping);
   }
 
   typeAndReplace() {
-    const nameElement = document.getElementById('name-text');
+    const nameElement = this.el.nativeElement.querySelector('#name-text');
 
     if (nameElement) {
       this.typeText(nameElement, this.originalName, () => {
@@ -33,7 +33,7 @@ export class Homepage implements OnInit {
           this.deleteText(nameElement, this.originalName.length, () => {
             setTimeout(() => {
               this.typeText(nameElement, this.newName);
-            }, this.delayAfterDelete)
+            }, this.delayAfterDelete);
           });
         }, this.delayAfterTyping);
       });
@@ -42,9 +42,13 @@ export class Homepage implements OnInit {
 
   typeText(element: HTMLElement, text: string, callback?: () => void) {
     let i = 0;
+    
+    // Clear the existing text content before starting to type
+    this.renderer.setProperty(element, 'textContent', '');
+  
     const interval = setInterval(() => {
       if (i < text.length) {
-        element.textContent += text.charAt(i);
+        this.renderer.setProperty(element, 'textContent', element.textContent + text.charAt(i));
         i++;
       } else {
         clearInterval(interval);
@@ -59,7 +63,7 @@ export class Homepage implements OnInit {
     let i = length;
     const interval = setInterval(() => {
       if (i > 0) {
-        element.textContent = element.textContent!.slice(0, -1);
+        this.renderer.setProperty(element, 'textContent', element.textContent!.slice(0, -1));
         i--;
       } else {
         clearInterval(interval);
