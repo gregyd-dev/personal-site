@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "personal-site-2": {
+    "personal-site": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/personal-site-2",
+            "outputPath": "dist/personal-site",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "personal-site-2:build:production"
+              "buildTarget": "personal-site:build:production"
             },
             "development": {
-              "buildTarget": "personal-site-2:build:development"
+              "buildTarget": "personal-site:build:development"
             }
           },
           "defaultConfiguration": "development"
