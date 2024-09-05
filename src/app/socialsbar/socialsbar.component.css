@@ -10,7 +10,7 @@ ion-icon:hover {
 }
 
 .main-socialsbar {
-    height: 200px;
+    height: 150px;
     display: flex;
     gap: 12px;
 }
