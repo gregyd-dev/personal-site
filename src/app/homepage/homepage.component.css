@@ -4,6 +4,7 @@
   justify-content: left;
   height: 100vh;
   margin-left: 12%;
+  margin-right: 12%;
 }
 
 .landing-page-text {
@@ -17,6 +18,8 @@
 
 .landing-page-text-header {
   font-size: 45px;
+  line-height: 45px;
+  font-weight: bold;
 }
 
 .landing-page-text-role {
@@ -32,7 +35,7 @@
   margin-bottom: -5px;
   margin-left: 2px;
   width: 4px;
-  height: 35px;
+  height: 43px;
   background-color: rgb(255, 255, 255);
   animation: blink 1s infinite;
 }
@@ -43,5 +46,11 @@
   }
   51%, 100% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-page-text {
+    width: 100%;
   }
 }

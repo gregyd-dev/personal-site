@@ -1,11 +1,12 @@
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
   imports: [],
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']  // Corrected styleUrl to styleUrls
+  styleUrls: ['./homepage.component.css'],  // Corrected styleUrl to styleUrls
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] // Add CUSTOM_ELEMENTS_SCHEMA
 })
 
 export class HomepageComponent implements OnInit {

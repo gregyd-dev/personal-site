@@ -1,0 +1,60 @@
+ion-icon {
+    font-size: 25px;
+    color: rgb(162, 162, 162);
+    transition: 0.3s ease;
+}
+
+ion-icon:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.main {
+    display: flex;
+    gap: 12px;
+}
+
+.icons {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    margin-left: 12%;
+    top: 100px;
+}
+
+.email-popup {
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    left: 30%;
+    margin: 20px auto 0px auto;
+    background-color: rgb(72, 72, 72);
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    padding-top: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.email-popup.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.email-popup.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
+}

@@ -1,0 +1,11 @@
+<main class="main">
+  <div class="icons">
+    <a class="link" href="https://github.com/gregyd-dev" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+    <a class="link" href="https://www.linkedin.com/in/gregorydeng/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+    <a class="link" href="https://www.instagram.com/greg_deng/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+    <a class="link" (click)="copyEmail('gregorydeng@hotmail.com')" target="_blank"><ion-icon name="mail-outline"></ion-icon></a>
+  </div>
+  <div class="email-popup" [ngClass]="{'visible': isPopupVisible, 'hidden': !isPopupVisible}">
+    Email copied to clipboard!
+  </div>
+</main>

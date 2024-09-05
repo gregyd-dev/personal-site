@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+/* Import Ionicons styles */
 @font-face {
     font-family: ArcticonsSans;
     src: url('assets/fonts/arcticons_sans/ArcticonsSans-Regular.ttf') format('truetype');
