@@ -7,6 +7,7 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']  // Corrected styleUrl to styleUrls
 })
+
 export class HomepageComponent implements OnInit {
   originalName = 'Gregyd';
   newName = 'Gregory Deng';

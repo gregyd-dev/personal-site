@@ -1,18 +1,47 @@
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 100vh;
+  margin-left: 12%;
+}
+
+.landing-page-text {
+  font-family: 'CreatoDisplay';
+  width: 500px;
+  height: 300px;
+  color: white;
+  text-align: left;
+  line-height: 30px;
+}
+
+.landing-page-text-header {
+  font-size: 45px;
+}
+
+.landing-page-text-role {
+  font-size: 17px;
+}
+
+.landing-page-text-subtext {
+  padding-top: 20px;
+}
+
 .name-text-cursor {
-    display: inline-block;
-    margin-bottom: -5px;
-    margin-left: 2px;
-    width: 4px;
-    height: 35px;
-    background-color: black;
-    animation: blink 1s infinite;
+  display: inline-block;
+  margin-bottom: -5px;
+  margin-left: 2px;
+  width: 4px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
   }
-  
-  @keyframes blink {
-    0%, 50% {
-      opacity: 1;
-    }
-    51%, 100% {
-      opacity: 0;
-    }
+  51%, 100% {
+    opacity: 0;
   }
+}

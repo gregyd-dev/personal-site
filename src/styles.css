@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: ArcticonsSans;
+    src: url('assets/fonts/arcticons_sans/ArcticonsSans-Regular.ttf') format('truetype');
+    font-weight:bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: LTSuperior;
+    src: url('assets/fonts/lt_superior/LTSuperior-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: heavitas;
+    src: url('assets/fonts/heavitas/Heavitas.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Coolvetica;
+    src: url('assets/fonts/coolvetica/coolvetica rg.otf') format('opentype'),
+         url('assets/fonts/coolvetica/coolvetica rg it.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CreatoDisplay;
+    src: url('assets/fonts/creato_display/CreatoDisplay-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CreatoDisplay;
+    src: url('assets/fonts/creato_display/CreatoDisplay-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+    background-color: rgb(47, 47, 47);
+}
