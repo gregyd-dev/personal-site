@@ -1,20 +1,57 @@
 .main-homepage {
-  width: 100%;
   height: 100%;
+  width: 120%;
   overflow: auto;
 }
 
 .scroll-line {
   position: relative;
   top: -50px;
-  left: 20%;
+  left: 100px;
   height: 150%;
+  background-color: rgb(180, 180, 180);
+  width: 2px;
+}
+
+.scroll-line-date1 {
+  position: absolute;
+  left: -6px;
+  top: 530px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
   background-color: white;
-  width: 6px;
+}
+
+.scroll-line-date1-number {
+  position: absolute;
+  left: 25px;
+  top: -1px;
+  width: 200px;
+  color: rgb(177, 177, 177);
+  font-size: 12px;
+}
+
+.scroll-line-date2 {
+  position: absolute;
+  left: -6px;
+  top: 910px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.scroll-line-date2-number {
+  position: absolute;
+  left: 25px;
+  top: -1px;
+  width: 200px;
+  color: rgb(177, 177, 177);
+  font-size: 12px;
 }
 
 .landing-page {
-  width: 100%;
   height: 100%;
   gap: 20px;
   margin-left: 12%;
@@ -70,6 +107,6 @@
 
 @media (max-width: 600px) {
   .landing-page-text {
-    width: 75%;
+    width: 80%;
   }
 }
