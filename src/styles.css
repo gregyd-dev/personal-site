@@ -45,4 +45,6 @@
 
 html, body {
     background-color: rgb(47, 47, 47);
+    overflow: auto;
 }
+

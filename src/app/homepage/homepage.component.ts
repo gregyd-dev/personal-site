@@ -1,12 +1,12 @@
-import { Component, ElementRef, OnInit, Renderer2, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { WorkexpComponent } from '../workexp/workexp.component';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [],
+  imports: [WorkexpComponent],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],  // Corrected styleUrl to styleUrls
-  schemas: [CUSTOM_ELEMENTS_SCHEMA] // Add CUSTOM_ELEMENTS_SCHEMA
 })
 
 export class HomepageComponent implements OnInit {
