@@ -1,5 +1,6 @@
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { WorkexpComponent } from '../workexp/workexp.component';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-homepage',
@@ -18,7 +19,7 @@ export class HomepageComponent implements OnInit {
   delayAfterTyping = 600;
   delayAfterDelete = 250;
 
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
+  constructor(private scrollService: ScrollService, private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit() {
     setTimeout(() => {
@@ -74,5 +75,26 @@ export class HomepageComponent implements OnInit {
         }
       }
     }, this.deletingSpeed);
+  }
+
+  @ViewChild('landingpage') landingpage!: ElementRef;
+
+  ngAfterViewInit(): void {
+    // Register the landingpage element with the ScrollService
+    this.scrollService.setLandingPageElement(this.landingpage.nativeElement);
+
+    // Listen to scroll events
+    this.landingpage.nativeElement.addEventListener('scroll', this.onScroll.bind(this));
+  }
+
+  onScroll(): void {
+    const scrollTop = this.landingpage.nativeElement.scrollTop;
+    const scrollHeight = this.landingpage.nativeElement.scrollHeight;
+    const clientHeight = this.landingpage.nativeElement.clientHeight;
+
+    const scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+
+    // Update the scroll position in the ScrollService
+    this.scrollService.updateScrollPosition(scrollPercent);
   }
 }

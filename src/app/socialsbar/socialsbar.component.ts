@@ -1,5 +1,6 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, ViewChild, ElementRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
+import { ScrollService } from '../scroll.service'
 
 @Component({
   selector: 'app-socialsbar',
@@ -30,5 +31,40 @@ export class SocialsbarComponent {
     setTimeout(() => {
       this.isPopupVisible = false; // Trigger fade-out after 2 seconds
     }, 1300);
+  }
+
+  constructor(private scrollService: ScrollService) {}
+
+  ngOnInit(): void {
+    // Subscribe to the scroll position updates
+    this.scrollService.currentScrollPosition.subscribe((scrollPercent: number) => {
+      this.updateActiveItem(scrollPercent);
+    });
+  }
+
+  updateActiveItem(scrollPercent: number): void {
+    const scrollItems = document.querySelectorAll('.scrollpos-item');
+    const scrollItemsBars = document.querySelectorAll('.scrollpos-item-bar');
+
+    // Remove 'active' class from all items
+    scrollItems.forEach(item => item.classList.remove('active'));
+    scrollItemsBars.forEach(item => item.classList.remove('active'));
+
+    // Apply the 'active' class based on the scroll percentage
+    if (scrollPercent > 15 && scrollPercent <= 100) {
+      scrollItems[0].classList.add('active'); // Highlight EXPERIENCE
+      scrollItemsBars[0].classList.add('active'); // Highlight EXPERIENCE
+    } else if (scrollPercent >= 33 && scrollPercent < 66) {
+      scrollItems[1].classList.add('active'); // Highlight PROJECTS
+      scrollItemsBars[1].classList.add('active'); // Highlight EXPERIENCE
+    } else if (scrollPercent > 66) {
+      scrollItems[2].classList.add('active'); // Highlight ABOUT ME
+      scrollItemsBars[2].classList.add('active'); // Highlight EXPERIENCE
+    }
+  }
+
+  scrollTo(scrollPercent: number): void {
+    // Use the ScrollService to trigger scrolling
+    this.scrollService.scrollToPosition(scrollPercent);
   }
 }

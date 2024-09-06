@@ -16,7 +16,7 @@
 .scroll-line-date1 {
   position: absolute;
   left: -6px;
-  top: 530px;
+  top: 72vh;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -35,7 +35,7 @@
 .scroll-line-date2 {
   position: absolute;
   left: -6px;
-  top: 910px;
+  top: 123vh;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -105,7 +105,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .landing-page-text {
     width: 80%;
   }

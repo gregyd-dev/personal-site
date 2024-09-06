@@ -59,3 +59,62 @@ ion-icon:hover {
       opacity: 0;
     }
 }
+
+.scrollpos {
+    display: flex;
+    gap: 20px;
+    position: absolute; 
+    margin-top: 2px; 
+    top: 8%;
+    right: 20%;
+}
+
+.scrollpos-item-bar {
+    background-color: rgb(121, 121, 121);
+    width: 100%;
+    height: 2px;
+    margin: auto;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.scrollpos-item {
+    padding-top: 6px;
+    width: 75px;
+    height: 40px;
+    font-family: 'CreatoDisplay';
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(121, 121, 121);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.scrollpos-item.active {
+    color: white;
+}
+
+.scrollpos-item:hover {
+    color: white;
+    cursor: pointer;
+
+    .scrollpos-item-bar {
+        background-color: white;
+    }
+}
+
+.scrollpos-item-bar.active {
+    background-color: white;
+}
+
+
+@media (max-width: 700px) {
+    .icons {
+        top: 25%;
+    }
+
+    .scrollpos {
+        left: 12%;
+        top: 15%;
+    }
+}

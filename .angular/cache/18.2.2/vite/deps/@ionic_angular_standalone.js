@@ -1,4 +1,10 @@
 import {
+  startFocusVisible
+} from "./chunk-WJBU7CFW.js";
+import {
+  mdTransitionAnimation
+} from "./chunk-CECVUULP.js";
+import {
   MENU_BACK_BUTTON_PRIORITY,
   OVERLAY_BACK_BUTTON_PRIORITY,
   shouldUseCloseWatcher
@@ -31,9 +37,6 @@ import {
   resetContentScrollY
 } from "./chunk-EAA2ILUQ.js";
 import {
-  startFocusVisible
-} from "./chunk-WJBU7CFW.js";
-import {
   ActivatedRoute,
   ChildrenOutletContexts,
   NavigationStart,
@@ -41,8 +44,8 @@ import {
   Router,
   RouterLink,
   UrlSerializer
-} from "./chunk-J347UBXR.js";
-import "./chunk-DKKCEA6C.js";
+} from "./chunk-OLCJ2BJO.js";
+import "./chunk-ZDJ3OV4V.js";
 import {
   CommonModule,
   DOCUMENT,
@@ -51,12 +54,11 @@ import {
   NgIf,
   NgTemplateOutlet,
   getDOM
-} from "./chunk-KOXAZKCP.js";
+} from "./chunk-K3EFOK3E.js";
 import {
   APP_INITIALIZER,
   ApplicationRef,
   Attribute,
-  BehaviorSubject,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
@@ -81,32 +83,21 @@ import {
   RuntimeError,
   Self,
   SkipSelf,
-  Subject,
   TemplateRef,
   Version,
   ViewChild,
   ViewContainerRef,
-  __decorate,
   booleanAttribute,
-  combineLatest,
   computed,
   createComponent,
-  distinctUntilChanged,
-  filter,
-  forkJoin,
   forwardRef,
-  from,
-  fromEvent,
   inject,
   isPromise,
   isSubscribable,
   makeEnvironmentProviders,
-  map,
-  of,
   reflectComponentType,
   setClassMetadata,
   signal,
-  switchMap,
   untracked,
   ɵɵInheritDefinitionFeature,
   ɵɵNgOnChangesFeature,
@@ -142,13 +133,24 @@ import {
   ɵɵrestoreView,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-3G4SSYHA.js";
+} from "./chunk-IVDKHOVT.js";
+import {
+  BehaviorSubject,
+  Subject,
+  __decorate,
+  combineLatest,
+  distinctUntilChanged,
+  filter,
+  forkJoin,
+  from,
+  fromEvent,
+  map,
+  of,
+  switchMap
+} from "./chunk-J36OYC46.js";
 import {
   iosTransitionAnimation
-} from "./chunk-ZUQLGY47.js";
-import {
-  mdTransitionAnimation
-} from "./chunk-DO3PIQUO.js";
+} from "./chunk-SAY5SDL5.js";
 import {
   LIFECYCLE_DID_ENTER,
   LIFECYCLE_DID_LEAVE,
@@ -161,7 +163,7 @@ import {
   setPageHidden,
   transition,
   waitForMount
-} from "./chunk-JUATNEI4.js";
+} from "./chunk-54ICOVVW.js";
 import {
   config,
   getIonMode,
