@@ -51,7 +51,7 @@ export class SocialsbarComponent {
     scrollItemsBars.forEach(item => item.classList.remove('active'));
 
     // Apply the 'active' class based on the scroll percentage
-    if (scrollPercent > 15 && scrollPercent <= 100) {
+    if (scrollPercent > 4 && scrollPercent <= 100) {
       scrollItems[0].classList.add('active'); // Highlight EXPERIENCE
       scrollItemsBars[0].classList.add('active'); // Highlight EXPERIENCE
     } else if (scrollPercent >= 33 && scrollPercent < 66) {

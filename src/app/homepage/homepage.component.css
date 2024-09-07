@@ -8,7 +8,7 @@
   position: relative;
   top: -50px;
   left: 100px;
-  height: 150%;
+  height: 200%;
   background-color: rgb(180, 180, 180);
   width: 2px;
 }
@@ -16,7 +16,7 @@
 .scroll-line-date1 {
   position: absolute;
   left: -6px;
-  top: 72vh;
+  top: 350px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -35,7 +35,7 @@
 .scroll-line-date2 {
   position: absolute;
   left: -6px;
-  top: 123vh;
+  top: 790px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -108,5 +108,17 @@
 @media (max-width: 700px) {
   .landing-page-text {
     width: 80%;
+  }
+
+  .scroll-line {
+    left: 30px;
+  }
+
+  .scroll-line-date1 {
+    top: 280px;
+  }
+
+  .scroll-line-date2 {
+    top: 925px;
   }
 }
