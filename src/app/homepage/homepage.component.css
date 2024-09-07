@@ -106,19 +106,19 @@
 }
 
 @media (max-width: 700px) {
+  .scroll-height {
+    height: 200%;
+  }
+
   .landing-page-text {
-    width: 80%;
+    width: 83%;
   }
 
-  .scroll-line {
-    left: 30px;
+  .scroll-line, .scroll-line-date1, .scroll-line-date2 {
+    display: none;
   }
 
-  .scroll-line-date1 {
-    top: 280px;
-  }
-
-  .scroll-line-date2 {
-    top: 925px;
+  .scroll-line-date1, .scroll-line-date2 {
+    display: none;
   }
 }
