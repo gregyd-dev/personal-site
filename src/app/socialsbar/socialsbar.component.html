@@ -8,12 +8,12 @@
   <div class="email-popup" [ngClass]="{'visible': isPopupVisible, 'hidden': !isPopupVisible}">
     Email copied to clipboard!
   </div>
-  <div class="scrollpos">
+  <div class="scrollpos no-cursor">
     <div (click)="scrollTo(40)" class="scrollpos-item">
       EXPERIENCE
       <div class="scrollpos-item-bar"></div>
     </div>
-    <div class="scrollpos-item">
+    <div (click)="scrollTo(85)" class="scrollpos-item">
       PROJECTS
       <div class="scrollpos-item-bar"></div>
     </div>

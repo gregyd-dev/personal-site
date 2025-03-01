@@ -16,7 +16,7 @@
 .scroll-line-date1 {
   position: absolute;
   left: -6px;
-  top: 350px;
+  top: 380px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -35,7 +35,7 @@
 .scroll-line-date2 {
   position: absolute;
   left: -6px;
-  top: 790px;
+  top: 900px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -43,6 +43,25 @@
 }
 
 .scroll-line-date2-number {
+  position: absolute;
+  left: 25px;
+  top: -1px;
+  width: 200px;
+  color: rgb(177, 177, 177);
+  font-size: 12px;
+}
+
+.scroll-line-date3 {
+  position: absolute;
+  left: -6px;
+  top: 1350px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.scroll-line-date3-number {
   position: absolute;
   left: 25px;
   top: -1px;

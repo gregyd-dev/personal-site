@@ -9,6 +9,11 @@ ion-icon:hover {
     cursor: pointer;
 }
 
+.no-cursor {
+    user-select: none;   /* Prevents text selection */
+    caret-color: transparent; /* Hides the blinking cursor */
+  }
+
 .main-socialsbar {
     height: 150px;
     display: flex;

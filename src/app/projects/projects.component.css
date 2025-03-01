@@ -1,0 +1,7 @@
+.test {
+    font-size: 25px;
+    height: 50%;
+    width: 80%;
+    border: 5px solid rgb(111, 111, 111);
+    border-radius: 10px;
+}

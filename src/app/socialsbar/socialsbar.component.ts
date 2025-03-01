@@ -12,6 +12,7 @@ import { ScrollService } from '../scroll.service'
 })
 
 export class SocialsbarComponent {
+  selectedOption = false; // variable to track whether the user has selected to scroll to a specific section
   isPopupVisible = false;
 
   // Method to copy to clipboard and show the popup
@@ -43,6 +44,10 @@ export class SocialsbarComponent {
   }
 
   updateActiveItem(scrollPercent: number): void {
+    if (this.selectedOption) {
+      return
+    }
+
     const scrollItems = document.querySelectorAll('.scrollpos-item');
     const scrollItemsBars = document.querySelectorAll('.scrollpos-item-bar');
 
@@ -51,20 +56,24 @@ export class SocialsbarComponent {
     scrollItemsBars.forEach(item => item.classList.remove('active'));
 
     // Apply the 'active' class based on the scroll percentage
-    if (scrollPercent > 4 && scrollPercent <= 100) {
-      scrollItems[0].classList.add('active'); // Highlight EXPERIENCE
-      scrollItemsBars[0].classList.add('active'); // Highlight EXPERIENCE
-    } else if (scrollPercent >= 33 && scrollPercent < 66) {
-      scrollItems[1].classList.add('active'); // Highlight PROJECTS
-      scrollItemsBars[1].classList.add('active'); // Highlight EXPERIENCE
+    if (scrollPercent > 4 && scrollPercent <= 80) {
+      scrollItems[0].classList.add('active'); // Highlight Experience
+      scrollItemsBars[0].classList.add('active'); // Highlight Underline
+    } else if (scrollPercent >= 80 && scrollPercent < 100) {
+      scrollItems[1].classList.add('active'); // Highlight Projects
+      scrollItemsBars[1].classList.add('active'); // Highlight Underline
     } else if (scrollPercent > 66) {
-      scrollItems[2].classList.add('active'); // Highlight ABOUT ME
-      scrollItemsBars[2].classList.add('active'); // Highlight EXPERIENCE
+      scrollItems[2].classList.add('active'); // Highlight Projects
+      scrollItemsBars[2].classList.add('active'); // Highlight Underline
     }
   }
 
   scrollTo(scrollPercent: number): void {
     // Use the ScrollService to trigger scrolling
+    this.selectedOption = true;
     this.scrollService.scrollToPosition(scrollPercent);
+    setTimeout(() => {
+      this.selectedOption = false;
+    }, 580); // Adjust timeout based on scroll duration
   }
 }

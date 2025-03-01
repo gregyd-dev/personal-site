@@ -22,15 +22,18 @@ a {
 }
 
 .item-1 {
-    height: 330px;
+    height: 350px;
 }
 
 .item-2 {
-    height: 280px;
+    height: 330px;
 }
 
+.item-3 {
+    height: 280px
+}
 
-.item-1:hover, .item-2:hover {
+.item-1:hover, .item-2:hover, .item-3:hover {
     border-color: white;
     cursor: pointer;
 }
