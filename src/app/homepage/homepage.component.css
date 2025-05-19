@@ -16,7 +16,7 @@
 .scroll-line-date1 {
   position: absolute;
   left: -6px;
-  top: 380px;
+  top: 330px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -35,7 +35,7 @@
 .scroll-line-date2 {
   position: absolute;
   left: -6px;
-  top: 900px;
+  top: 800px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -54,7 +54,7 @@
 .scroll-line-date3 {
   position: absolute;
   left: -6px;
-  top: 1350px;
+  top: 1250px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -124,7 +124,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .scroll-height {
     height: 200%;
   }
@@ -133,11 +133,13 @@
     width: 83%;
   }
 
-  .scroll-line, .scroll-line-date1, .scroll-line-date2 {
-    display: none;
+  .scroll-line {
+    color: transparent;
+    background: transparent;
+    border: none;
   }
 
-  .scroll-line-date1, .scroll-line-date2 {
+  .scroll-line-date {
     display: none;
   }
 }
