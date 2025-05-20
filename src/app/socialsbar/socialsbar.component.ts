@@ -56,30 +56,31 @@ export class SocialsbarComponent {
     scrollItemsBars.forEach(item => item.classList.remove('active'));
 
     // Apply the 'active' class based on the scroll percentage
-    if (scrollPercent > 4 && scrollPercent <= 80) {
+    if (scrollPercent > 4 && scrollPercent <= 65) {
       scrollItems[0].classList.add('active'); // Highlight Experience
       scrollItemsBars[0].classList.add('active'); // Highlight Underline
-    } else if (scrollPercent >= 80 && scrollPercent < 100) {
+    } else if (scrollPercent >= 65 && scrollPercent < 90) {
       scrollItems[1].classList.add('active'); // Highlight Projects
       scrollItemsBars[1].classList.add('active'); // Highlight Underline
-    } else if (scrollPercent > 66) {
+    } else if (scrollPercent > 90) {
       scrollItems[2].classList.add('active'); // Highlight Projects
       scrollItemsBars[2].classList.add('active'); // Highlight Underline
     }
   }
 
   scrollTo(scrollPercent: number): void {
-    // Check for if user is on mobile
     const screenWidth = window.innerWidth;
     if (screenWidth <= 700) {
       scrollPercent = scrollPercent - 18;
     }
 
-    // Use the ScrollService to trigger scrolling
-    this.selectedOption = true;
     this.scrollService.scrollToPosition(scrollPercent);
+    this.selectedOption = true;
+
+    // Wait until scroll completes, then clear flag and update UI
     setTimeout(() => {
       this.selectedOption = false;
-    }, 580); // Adjust timeout based on scroll duration
+      this.updateActiveItem(scrollPercent); // 👈 Now it will actually run
+    }, 670);
   }
 }

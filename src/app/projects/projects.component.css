@@ -18,7 +18,7 @@ ion-icon:hover {
 
 .projects-main {
     font-family: 'CreatoDisplay';
-    padding-bottom: 120px;
+    height: calc(35% + 25vw);
 }
 
 .header-text {
@@ -31,20 +31,21 @@ ion-icon:hover {
 
 .project-1 {
     display: flex;
-    height: 60%;
-    width: 80%;
+    height: 60vw;
+    width: 80vw;
     gap: 50px;
 }
 
 .project-img {
     position: relative;
-    height: 500px;
-    width: 500px;
+    height: calc(20vw + 15vh);
+    width: calc(20vw + 15vh);
 }
 
 .project-text-1 {
     position: relative;
-    top: 130px;
+    top: calc(30% - 20vh);
+    width: 30vw;
 }
 
 .project-text-header {
