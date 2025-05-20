@@ -1,12 +1,13 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { WorkexpComponent } from '../workexp/workexp.component';
 import { ProjectsComponent } from '../projects/projects.component';
+import { AboutmeComponent } from '../aboutme/aboutme.component';
 import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [WorkexpComponent, ProjectsComponent],
+  imports: [WorkexpComponent, ProjectsComponent, AboutmeComponent],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],  // Corrected styleUrl to styleUrls
 })

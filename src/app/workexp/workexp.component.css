@@ -70,8 +70,8 @@ a {
 }
 
 .workexp-skills-item {
-    background-color: grey;
-    color: white;
+    background-color: rgb(38, 56, 82);
+    color: rgb(136, 141, 174);
     padding: 4px 10px 4px 10px;
     border-radius: 15px;
     font-size: 14px;

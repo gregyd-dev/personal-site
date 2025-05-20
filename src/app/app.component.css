@@ -1,3 +1,7 @@
 div {
     overflow: auto;
 }
+
+span {
+    font-family: 'CreatoDisplay';
+}

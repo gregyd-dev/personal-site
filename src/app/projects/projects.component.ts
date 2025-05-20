@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 @Component({
   selector: 'app-projects',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   imports: [],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProjectsComponent {
 
