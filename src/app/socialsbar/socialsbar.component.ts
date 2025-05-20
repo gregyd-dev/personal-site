@@ -72,7 +72,7 @@ export class SocialsbarComponent {
     // Check for if user is on mobile
     const screenWidth = window.innerWidth;
     if (screenWidth <= 700) {
-      scrollPercent = scrollPercent - 20;
+      scrollPercent = scrollPercent - 18;
     }
 
     // Use the ScrollService to trigger scrolling

@@ -1,7 +1,11 @@
-.test {
-    font-size: 25px;
-    height: 50%;
+.projects-main {
+    font-family: 'CreatoDisplay';
+}
+
+.header-text {
+    position: relative;
+    font-size: 35px;
+    height: 1000px;
     width: 80%;
-    border: 5px solid rgb(111, 111, 111);
-    border-radius: 10px;
+    left: 44px;
 }

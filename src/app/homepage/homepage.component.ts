@@ -12,8 +12,8 @@ import { ScrollService } from '../scroll.service';
 })
 
 export class HomepageComponent implements OnInit {
-  originalName = 'Gregyd';
-  newName = 'Gregory Deng';
+  originalName = 'Gregyd.';
+  newName = 'Gregory Deng.';
   typingSpeed = 100;
   deletingSpeed = 100;
   delayBeforeTyping = 400;

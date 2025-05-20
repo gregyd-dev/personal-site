@@ -4,6 +4,34 @@
   overflow: auto;
 }
 
+span {
+  display: inline-block;
+  caret-color: transparent; /* Hides the blinking cursor */
+}
+
+.description {
+  padding-bottom: 20px;
+}
+
+.certifications {
+  font-size: 15px;
+  color: rgb(126, 126, 126);
+  transition: all 0.3s ease;
+}
+
+.certifications:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* .experience-header {
+  position: relative;
+  font-size: 20px;
+  left: 40px;
+  bottom: 70px;
+  color: rgb(167, 167, 167);
+} */
+
 .scroll-line {
   position: relative;
   top: -50px;
@@ -103,6 +131,7 @@
 
 .landing-page-text-subtext {
   padding-top: 20px;
+
 }
 
 .name-text-cursor {
@@ -134,6 +163,8 @@
   }
 
   .scroll-line {
+    position: relative;
+    left: 0px;
     color: transparent;
     background: transparent;
     border: none;

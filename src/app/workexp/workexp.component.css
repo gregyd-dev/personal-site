@@ -82,8 +82,8 @@ a {
     .main-workexp {
         position: absolute;
         top: 200px;
-        width: 70vw;
-        left: calc(50% - 4vw); 
+        width: 80vw;
+        left: calc(50% + 4vw);
         margin-bottom: 80px;
     }
 
